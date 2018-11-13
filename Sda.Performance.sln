@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sda.Performance", "Sda.Performance\Sda.Performance.csproj", "{B7758472-C5F3-48FB-8D6F-F1A3B54F142D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sda.Performance.Benchmark", "Sda.Performance.Benchmark\Sda.Performance.Benchmark.csproj", "{22210013-EC55-435B-BBF8-CA55036D00AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7758472-C5F3-48FB-8D6F-F1A3B54F142D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7758472-C5F3-48FB-8D6F-F1A3B54F142D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7758472-C5F3-48FB-8D6F-F1A3B54F142D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7758472-C5F3-48FB-8D6F-F1A3B54F142D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22210013-EC55-435B-BBF8-CA55036D00AD}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{22210013-EC55-435B-BBF8-CA55036D00AD}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{22210013-EC55-435B-BBF8-CA55036D00AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22210013-EC55-435B-BBF8-CA55036D00AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42F74201-5576-42A2-9237-74E975ABEB60}
+	EndGlobalSection
+EndGlobal
