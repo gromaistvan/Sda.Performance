@@ -7,26 +7,26 @@ using static BenchmarkDotNet.Running.BenchmarkRunner;
 
 namespace Sda.Performance.Benchmark
 {
-    [SimpleJob(launchCount: 1, warmupCount: 4, targetCount: 20)]
+    [SimpleJob(launchCount: 1, warmupCount: 1, targetCount: 20)]
     public class Program
     {
         static readonly Uri _host = new Uri("http://localhost:5000");
 
         static readonly HttpClient _client = new HttpClient();
 
-        static async Task CallAsync(string path)
+        static async Task CallAsync(string command)
         {
-            if (path == null) throw new ArgumentNullException(nameof(path));
+            if (command == null) throw new ArgumentNullException(nameof(command));
 
-            var url = new Uri(_host, path);
-            await Task.WhenAll(Enumerable.Range(1, 20).Select(i => _client.GetAsync(url)));
+            var url = new Uri(_host, $"api/{command}");
+            await Task.WhenAll(Enumerable.Range(1, 3).Select(i => _client.GetAsync(url)));
         }
 
-        [Benchmark]
-        public void Test() => CallAsync("api/entry/sync").Wait();
+        [Benchmark(Description = "Synchronized")]
+        public async Task SynchronizedTestAsync() => await CallAsync("sync");
 
-        [Benchmark]
-        public async Task TestAsync() => await CallAsync("api/entry/async");
+        [Benchmark(Description = "Asynchronous")]
+        public async Task AsynchronousTestAsync() => await CallAsync("async");
 
         static void Main()
         {
