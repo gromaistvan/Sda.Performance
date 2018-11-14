@@ -262,3 +262,4 @@ __pycache__/
 
 # Project
 /Sda.Performance/Files
+/Sda.Performance.Benchmark/BenchmarkDotNet.Artifacts
